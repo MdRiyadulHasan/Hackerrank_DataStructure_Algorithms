@@ -2,7 +2,9 @@ from collections import Counter
 import numpy as np
 def missingNumbers(arr,brr):
     a=Counter(arr)
+    print(a)
     b=Counter(brr)
+    print(b)
     c=b-a
     return sorted(c.keys())
 
