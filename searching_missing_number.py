@@ -1,4 +1,5 @@
 from collections import Counter
+import numpy as np
 def missingNumbers(arr,brr):
     a=Counter(arr)
     b=Counter(brr)
@@ -11,4 +12,5 @@ if __name__ =='__main__':
     m = int(input().strip())
     brr = list(map(int, input().rstrip().split()))
     result = missingNumbers(arr, brr)
+    result=np.asarray(result)
     print(result)
