@@ -1,10 +1,15 @@
+from collections import Counter
 def pairs(k, arr):
-    arr.sort()
+    d=Counter(arr)
+    print(d)
     c=0
-    for i in range(n-1):
-        for j in range (i+1,n):
-            if abs(arr[i]-arr[j])==k:
-                c=c+1
+    for i in arr:
+        if i+k in d:
+            c=c+1
+        if i-k in d:
+            c=c+1
+        del d[i]
+    
     return c
 
 if __name__ == "__main__":
